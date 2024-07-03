@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Portal</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% block page_content %}
+    <div class="container h-100" style="padding:5em;background:aliceblue">
+        <h1 class="mb-3 py-5">{{ _("Shops") }}</h1>
+        <form method="GET" action="">
+            <label for="airport">Airport:</label>
+            <select id="airport" name="airport" class="w-25" onchange="this.form.submit()">
+                <option value="">All</option>
+                {% for airport in airports %}
+                <option value="{{ airport.name }}" {% if selected_airport == airport.name %}selected{% endif %}>{{ airport.name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="available_for_lease" class="ml-3">Status:</label>
+            <select id="available_for_lease"  name="available_for_lease" onchange="this.form.submit()">
+                <option value="All" {% if selected_status == 'All' %}selected{% endif %}>All</option>
+                <option value="Lease" {% if selected_status == 'Lease' %}selected{% endif %}>Available for Lease</option>
+                <option value="Occupied" {% if selected_status == 'Occupied' %}selected{% endif %}>Occupied</option>
+            </select>
+        </form>
+
+        <div class="mt-5 row">
+            {% for shop in shops %}
+            <div class="card mr-3 p-3" style="width: 12em;background:gainsboro">
+                <h2>{{ shop.shop_name }}</h2>
+                <p><strong>shop no: </strong>{{ shop.shop_number }}</p>
+                <p><strong>area: </strong>{{ shop.area }}</p>
+                <p><strong>owner: </strong> {{ shop.shop_owner }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

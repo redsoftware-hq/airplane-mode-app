@@ -1,0 +1,38 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2024-06-25 00:42:52.916513",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Airplane Ticket",
+ "enabled": 0,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Your gate number is changes to {{ doc.gate_number }}</p>\n",
+ "message_type": "Markdown",
+ "modified": "2024-06-25 00:47:20.729182",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Test",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": "Flight Crew Member"
+  },
+  {
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": "Administrator"
+  },
+  {
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Test",
+ "value_changed": "gate_number"
+}

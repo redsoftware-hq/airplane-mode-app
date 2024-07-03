@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "format: {shop_number}",
+ "creation": "2024-06-19 23:30:32.146994",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_name",
+  "shop_number",
+  "area",
+  "column_break_qxpk",
+  "available_for_lease",
+  "shop_owner",
+  "airport",
+  "route",
+  "is_published"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Area",
+   "max_height": "100px",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "available_for_lease",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Available for Lease"
+  },
+  {
+   "fieldname": "column_break_qxpk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_owner",
+   "fieldtype": "Link",
+   "label": "Shop Owner",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "is_published"
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2024-06-23 01:12:26.341742",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Shop Detail",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "shops",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,35 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2024-06-25 00:31:41.564400",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Airplane Ticket",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Your gate number changes to {{ doc.gate_number }}!!!</p>\n\n<p>Sorry for inconvenience!</p>\n\n<p>Happy Jounrney.</p>\n",
+ "message_type": "Markdown",
+ "modified": "2024-06-25 00:33:53.043827",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "When Gate Number Changes",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "",
+   "receiver_by_role": "Flight Crew Member"
+  },
+  {
+   "receiver_by_role": "Administrator"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "Akshar",
+ "sender_email": "aksharp369@gmail.com",
+ "subject": "Gate Number Changed",
+ "value_changed": "gate_number"
+}

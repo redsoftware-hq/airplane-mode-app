@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		{% set color = frappe.form_dict.color if frappe.form_dict.color else 'black' %}
+		<div style="height: 100px; background-color: {{ color }}"></div>
+	</body>
+</html>

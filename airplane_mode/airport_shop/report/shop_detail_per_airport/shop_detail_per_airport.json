@@ -1,0 +1,47 @@
+{
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop",
+   "width": 0
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "label": "Shop Number",
+   "width": 0
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "width": 0
+  }
+ ],
+ "creation": "2024-06-21 19:56:09.989290",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "letterhead": null,
+ "modified": "2024-06-21 20:10:52.846663",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Shop Detail per Airport",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT * FROM `tabShop Detail`",
+ "ref_doctype": "Shop Detail",
+ "report_name": "Shop Detail per Airport",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {tenant_information}-{shop_information}",
+ "creation": "2024-06-19 23:28:29.919460",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1srm",
+  "amended_from",
+  "rent",
+  "tenant_information",
+  "shop_information",
+  "column_break_hwkx",
+  "start_date",
+  "end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1srm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Contract Detail",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rent",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant_information",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant Information",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_information",
+   "fieldtype": "Link",
+   "label": "Shop Information",
+   "options": "Shop Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hwkx",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-19 23:43:32.594154",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Contract Detail",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

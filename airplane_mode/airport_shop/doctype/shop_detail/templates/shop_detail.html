@@ -1,0 +1,16 @@
+{% extends "templates/web.html" %} {% block page_content %}
+<h1>{{ title |e }}</h1>
+<h2>Shop Details</h2>
+<ul>
+	<li>Airport: {{ airport }}</li>
+	<li>{{shop_name}}</li>
+	<li>{{ shop_number }}</li>
+	<li>{{ area }}</li>
+	<li>
+		{% if available_for_lease == 1 %} Available for Lease {% elif available_for_lease == 0 %}
+		Occupied {% else %} Occupied {% endif %}
+	</li>
+</ul>
+{% endblock %}
+
+<!-- this is a sample default web page template -->
