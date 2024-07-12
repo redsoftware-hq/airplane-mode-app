@@ -13,6 +13,10 @@ app_license = "mit"
 #      {"source": r"/.*airlines.*", "target": "airplane_mode.airplane_mode.doctype.airline.api.redirect_url"},
 # ]
 
+webhooks = [
+    {"method": "POST", "path": "airplane_mode.api.handle_facebook_webhook"}
+]
+
 # include js, css files in header of desk.html
 # app_include_css = "/assets/airplane_mode/css/airplane_mode.css"
 # app_include_js = "/assets/airplane_mode/js/airplane_mode.js"
