@@ -32,16 +32,33 @@ def fetch_lead_data(leadgen_id, access_token):
     print("RESPONSE", response)
     if response.status_code == 200:
         lead_data = response.json()
-        process_lead_data(lead_data)
+        process_lead_data(lead_data , conf.api_key, conf.api_secret)
 
-def process_lead_data(lead_data):
-    print("Process Lead Data..")
+def process_lead_data(lead_data, api_key, api_secret):
     field_data = lead_data.get("field_data", [])
     lead_info = {field["name"]: field["values"][0] for field in field_data}
-    print(lead_info)
-    frappe.get_doc({
+    
+    # Format phone number if it contains a country code
+    phone_number = lead_info.get("phone_number")
+    if phone_number and phone_number.startswith("+"):
+        phone_number = phone_number.replace(" ", "").replace("-", "")
+        formatted_phone_number = f"{phone_number[:3]}-{phone_number[3:]}"
+    else:
+        formatted_phone_number = phone_number
+
+    headers = {
+        'Authorization': f'token {api_key}:{api_secret}',
+        'Content-Type': 'application/json'
+    }
+    data = {
         "doctype": "Facebook Lead",
         "lead_name": lead_info.get("full_name"),
         "email_id": lead_info.get("email"),
-        "mobile_no": lead_info.get("phone_number")
-    }).insert()
+        "mobile_no": formatted_phone_number
+    }
+    response = requests.post(f"https://demo-redsoft.frappe.cloud/api/resource/Facebook Lead", headers=headers, json=data)
+    if response.status_code == 200:
+        print("Lead created successfully")
+    else:
+        print(f"Failed to create lead: {response.text}")
+
