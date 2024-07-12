@@ -12,7 +12,7 @@ def handle_facebook_webhook():
     if frappe.request.method == "GET":
         if (frappe.request.args.get("hub.mode") == "subscribe" and
             frappe.request.args.get("hub.verify_token") == frappe.conf.facebook_verify_token):
-            return frappe.request.args.get("hub.challenge")
+            return Response(frappe.request.args.get("hub.challenge"), status=200, content_type='text/plain')
         else:
             return "Verification token mismatch", 403
 
