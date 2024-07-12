@@ -24,9 +24,10 @@ def handle_facebook_webhook():
         return {"status": "error", "message": str(e)}
 
 def fetch_lead_data(leadgen_id, access_token):
+    conf = frappe.get_conf()
     print("FETCH LEAD DATA....")
     url = f"https://graph.facebook.com/v11.0/{leadgen_id}"
-    params = {"access_token": os.environ.get('ACCESS_TOKEN')}
+    params = {"access_token": conf.access_token}
     response = requests.get(url, params=params)
     print("RESPONSE", response)
     if response.status_code == 200:
