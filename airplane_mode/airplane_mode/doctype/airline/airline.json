@@ -18,7 +18,7 @@
   {
    "fieldname": "founding_year",
    "fieldtype": "Int",
-   "label": "Founding Year",
+   "label": "Founding Year1",
    "non_negative": 1
   },
   {

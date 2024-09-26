@@ -19,7 +19,7 @@
   "destination_airport",
   "destination_airport_code",
   "section_break_nrvt",
-  "crew_members",
+  "crew_members_list",
   "section_break_mixo",
   "date_of_departure",
   "duration",
@@ -144,10 +144,10 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "crew_members",
+   "fieldname": "crew_members_list",
    "fieldtype": "Table",
    "label": "Crew Members",
-   "options": "crew members list",
+   "options": "Crew members list",
    "reqd": 1
   }
  ],
@@ -161,7 +161,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-06-19 19:45:18.311549",
+ "modified": "2024-08-21 20:06:06.702733",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

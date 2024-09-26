@@ -14,5 +14,13 @@ frappe.ui.form.on("Airplane Ticket", {
 				"Assign"
 			);
 		});
+
+		frm.set_query("target_link_field_Name", () => {
+			return {
+				filter: {
+					"state": "GUJ"
+				}
+			}
+		})
 	},
 });

@@ -132,11 +132,22 @@ webhooks = [
 
 # doc_events = {
 # 	"*": {
-# 		"on_update": "method",
+# 		"on_update": "app.api.method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 # 	}
 # }
+
+# frappe.enque("app.api.method")
+
+# fixtures = ["Doctype"]
+
+# fixtures = [{
+#     "dt": "Doctype",
+#     "filters": {
+#         ["filed_name", "operator", "value"]
+#     }
+# }]
 
 # Scheduled Tasks
 # ---------------
@@ -161,6 +172,10 @@ portal_menu_items = [
 website_route_rules = [
     {"from_route": "/shop-portal", "to_route": "shop_portal"}
 ]
+
+# webhooks = [
+#     {"method": "POST", "path": "airplane_mode.api.handle_facebook_webhook"}
+# ]
 
 
 # scheduler_events = {

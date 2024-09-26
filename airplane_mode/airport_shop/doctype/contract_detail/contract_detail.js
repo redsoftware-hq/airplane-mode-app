@@ -13,5 +13,13 @@ frappe.ui.form.on("Contract Detail", {
 				frm.set_value("rent", r.message.default_rent);
 			},
 		});
+
+		frm.set_query("shop_information", () => {
+			return {
+				"filters": {
+					"available_for_lease": 1
+				}
+			}
+		})
 	},
 });

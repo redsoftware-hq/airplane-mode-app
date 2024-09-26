@@ -12,7 +12,7 @@
  "is_standard": 1,
  "message": "<p>Your gate number changes to {{ doc.gate_number }}!!!</p>\n\n<p>Sorry for inconvenience!</p>\n\n<p>Happy Jounrney.</p>\n",
  "message_type": "Markdown",
- "modified": "2024-06-25 00:46:34.504270",
+ "modified": "2024-08-21 20:14:40.446519",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "When Gate Number Changes",
@@ -33,7 +33,7 @@
  ],
  "send_system_notification": 1,
  "send_to_all_assignees": 0,
- "sender": "Akshar",
+ "sender": "Akshar Prajapati",
  "sender_email": "aksharp369@gmail.com",
  "subject": "Gate Number Changed",
  "value_changed": "gate_number"
